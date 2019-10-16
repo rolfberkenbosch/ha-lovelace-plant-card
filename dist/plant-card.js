@@ -1,4 +1,3 @@
-//import {FlowerData} from '/local/lovelace-flower-card/data/data.js';
 customElements.whenDefined('card-tools').then(() => {
 class FlowerCard extends cardTools.LitElement {
 
@@ -156,12 +155,12 @@ class FlowerCard extends cardTools.LitElement {
 
 }
 
-customElements.define('flower-card', FlowerCard);
+customElements.define('plant-card', FlowerCard);
 });
 
 window.setTimeout(() => {
   if(customElements.get('card-tools')) return;
-  customElements.define('flower-card', class extends HTMLElement{
+  customElements.define('plant-card', class extends HTMLElement{
     setConfig() { throw new Error("Can't find card-tools. See https://github.com/thomasloven/lovelace-card-tools");}
   });
 }, 2000);
